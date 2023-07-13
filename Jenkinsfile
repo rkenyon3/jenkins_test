@@ -1,5 +1,5 @@
 /* Requires the Docker Pipeline plugin */
-pipeline {
+/*pipeline {
     agent { docker { image 'python:3.10.7-alpine' } }
     stages {
         stage('build') {
@@ -19,3 +19,17 @@ pipeline {
         }
     }
 }
+*/
+pipeline {
+    agent {
+        docker { image 'node:18.16.0-alpine' }
+    }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
+}
+
