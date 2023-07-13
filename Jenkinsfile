@@ -13,5 +13,10 @@ pipeline {
                 sh 'echo "another command"
             }
         }
+        stage('Test'){
+            steps{
+                sh 'node --version'
+            }
+        }
     }
 }
