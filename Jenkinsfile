@@ -10,7 +10,7 @@ pipeline {
                     echo "Multiline shell steps works too"
                     ls -lah
                 '''
-                sh 'echo "another command"
+                sh 'echo "another command"'
             }
         }
         stage('Test'){
